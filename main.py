@@ -9,7 +9,7 @@ from pytube import YouTube
 bot = commands.Bot(command_prefix = '$')
 
 # IMPORTANT!!! CHANGE THIS TO THE PREFERRED DIRECTORY
-filedirectory = os.path.dirname(__main.py__)
+filedirectory = os.getcwd()
 
 # runs when the bot is ready for use
 @bot.event
