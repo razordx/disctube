@@ -1,4 +1,5 @@
 # imports all the necessary modules and dependencies for the bot to function
+import asyncio
 import discord
 import os, binascii
 import pytube
@@ -44,4 +45,4 @@ async def youtube(ctx, link, filetype):
     else:
         await ctx.send("Not a supported filetype!!!")
 # put your bot token inbetween the quote marks to make the bot run
-bot.run('')
+bot.run(os.environ.get("TOKEN"))
