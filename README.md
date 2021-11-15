@@ -1,4 +1,4 @@
-#forked-version-note
+# forked-version-note
 euh, so I found out that the code won't work on heroku coz of error 429, heroku has a ratelimit which this bot surpass it.
 try running it on another hosting service or run it locally on your PC.
 # disctube
