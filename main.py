@@ -33,7 +33,7 @@ async def youtube(ctx, link, filetype):
         
         # and finally it sends the video file thru discord
         video.download(filedirectory, filename=fname + '.mp4')
-        await ctx.send(file=discord.File(f'{filedirectory}\{fname}.mp4'))
+        await ctx.send(file=discord.File(f'{filedirectory}/{fname}.mp4'))
     elif filetype == 'mp3':
         # finds the first stream that is audio. this is guaranteed to always be a mp3 file.
         video = url.streams.filter(only_audio=True).first()
@@ -41,7 +41,7 @@ async def youtube(ctx, link, filetype):
 
         # and finally it sends the audio file thru discord
         video.download(filedirectory, filename=fname + '.mp3')
-        await ctx.send(file=discord.File(f'{filedirectory}\{fname}.mp3'))
+        await ctx.send(file=discord.File(f'{filedirectory}/{fname}.mp3'))
     else:
         await ctx.send("Not a supported filetype!!!")
 # put your bot token inbetween the quote marks to make the bot run
